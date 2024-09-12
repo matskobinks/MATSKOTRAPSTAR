@@ -1,2 +1,2 @@
-# Site BTS SIO
+# BTS SIO
 Mathis BARBIER-GUERBETTE
