@@ -7,22 +7,49 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 10px;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
             text-align: center;
+            color: #3366cc;
+            margin-top: 20px;
+        }
+        .container {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #3366cc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .header {
+            background-color: #3366cc;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
         }
         iframe {
             width: 100%;
             height: 600px;
             border: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h2>Localisation du Lycée Parc de Vilgénis</h2>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.337482565212!2d2.261195615673137!3d48.84747487928745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671dff9fa1f07%3A0xb17b28232a55c199!2sLyc%C3%A9e%20Parc%20de%20Vilg%C3%A9nis!5e0!3m2!1sfr!2sfr!4v1633960843848!5m2!1sfr!2sfr"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
+    <div class="container">
+        <h1>Section 1 : Localisation</h1>
+        <div class="header">
+            Localisation du Lycée Parc de Vilgénis
+        </div>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.337482565212!2d2.261195615673137!3d48.84747487928745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671dff9fa1f07%3A0xb17b28232a55c199!2sLyc%C3%A9e%20Parc%20de%20Vilg%C3%A9nis!5e0!3m2!1sfr!2sfr!4v1633960843848!5m2!1sfr!2sfr"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
 </body>
 </html>
