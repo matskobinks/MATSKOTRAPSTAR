@@ -1,85 +1,97 @@
+/* Réinitialisation des marges et des paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Style général du corps */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
+/* Conteneur principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* En-tête */
 header {
-    background-color: #111;
-    width: 100%;
-    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
+    margin-top: 10px;
 }
 
 nav ul li {
-    position: relative;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    display: block;
+    font-size: 1.1em;
+    padding: 8px 15px;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #333;
+    background-color: #555;
+    border-radius: 5px;
 }
 
-nav ul li .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #222;
-    display: none;
-    min-width: 150px;
-}
-
-nav ul li:hover .dropdown {
-    display: block;
-}
-
-nav ul li .dropdown li a {
-    padding: 10px;
-}
-
-main {
-    text-align: center;
-    padding: 50px;
-}
-
-footer {
-    text-align: center;
+/* Style de la section principale */
+.content {
     padding: 20px;
-    background-color: #111;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajout pour centrer horizontalement le menu déroulant */
-nav ul li .dropdown {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+/* Style des boutons de retour */
+.container-retour {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Retour {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 20px;
+    background-color: #3498db; /* Couleur bleu */
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Retour:hover {
+    background-color: #2980b9; /* Couleur bleu foncé au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
