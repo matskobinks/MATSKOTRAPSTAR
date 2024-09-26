@@ -1,0 +1,285 @@
+@layer demo {
+    @property --color1POSx {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 0%;
+    }
+    
+    @property --color1POSy {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 0%;
+    }
+    
+    @property --color2POSx {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 100%;
+    }
+    
+    @property --color2POSy {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 0%;
+    }
+    
+    @property --color3POSx {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 100%;
+    }
+    
+    @property --color3POSy {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 100%;
+    }
+    
+    @property --color4POSx {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 0%;
+    }
+    
+    @property --color4POSy {
+      inherits: false;
+      syntax: "<percentage>";
+      initial-value: 100%;
+    }
+    
+    @keyframes --up-n-down-1 {
+      0%, 100% { --color1POSy: 0% }
+      50%      { --color1POSy: 100% }
+    }
+    
+    @keyframes --side-to-side-1 {
+      0%, 100% { --color1POSx: 0% }
+      50%      { --color1POSx: 100% }
+    }
+    
+    @keyframes --side-to-side-2 {
+      0%, 100% { --color2POSx: 100% }
+      50%      { --color2POSx: 0% }
+    }
+    
+    @keyframes --up-n-down-2 {
+      0%, 100% { --color2POSy: 0% }
+      50%      { --color2POSy: 100% }
+    }
+    
+    @keyframes --side-to-side-3 {
+      0%, 100% { --color3POSx: 100% }
+      50%      { --color3POSx: 0% }
+    }
+    
+    @keyframes --up-n-down-3 {
+      0%, 100% { --color3POSy: 100% }
+      50%      { --color3POSy: 0% }
+    }
+    
+    @keyframes --side-to-side-4 {
+      0%, 100% { --color4POSx: 0% }
+      50%      { --color4POSx: 100% }
+    }
+    
+    @keyframes --up-n-down-4 {
+      0%, 100% { --color4POSy: 100% }
+      50%      { --color4POSy: 0% }
+    }
+    
+    .card::before {
+      --color1LCH: 70% .5 150;
+      --color2LCH: 70% .5 330;
+      --color3LCH: 70% .5 270;
+      --color4LCH: 70% .5 100;
+      
+      --gradient-size: 75vw;
+      --space: ;
+      
+      content:"";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      inset: -150px;
+      
+      background-image: 
+        radial-gradient(
+          var(--gradient-size) circle at var(--color1POSx) var(--color1POSy) var(--space), 
+          oklch(var(--color1LCH)), oklch(var(--color1LCH) / 0%)
+        ),
+        radial-gradient(
+          var(--gradient-size) circle at var(--color2POSx) var(--color2POSy) var(--space), 
+          oklch(var(--color2LCH)), oklch(var(--color2LCH) / 0%)
+        ),
+        radial-gradient(
+          var(--gradient-size) circle at var(--color3POSx) var(--color3POSy) var(--space), 
+          oklch(var(--color3LCH)), oklch(var(--color3LCH) / 0%)
+        ),
+        radial-gradient(
+          var(--gradient-size) circle at var(--color4POSx) var(--color4POSy) var(--space), 
+          oklch(var(--color4LCH)), oklch(var(--color4LCH) / 0%)
+        )
+      ;
+      mask-image: radial-gradient(closest-side circle at center, #000, #0000);
+      
+      @supports (background: linear-gradient(in oklab, white, black)) {
+        --space: in oklab;
+      }
+      
+      animation: 
+        --up-n-down-1 4s linear infinite, 
+        --side-to-side-1 4s linear -1s infinite,
+        --up-n-down-2 4s linear -1s infinite, 
+        --side-to-side-2 4s linear infinite,
+        --up-n-down-3 4s linear infinite, 
+        --side-to-side-3 4s linear -1s infinite,
+        --up-n-down-4 4s linear -1s infinite, 
+        --side-to-side-4 4s linear infinite
+      ;
+    }
+  }
+  
+  
+  
+  
+  
+  @layer support.demo {
+    html {
+      display: grid;
+      min-block-size: 100%;
+    }
+    
+    body {
+      display: grid;
+      place-content: center;
+      padding: var(--size-5);
+      gap: var(--size-5);
+      font-family: 'IBM Plex Sans', Courier, monospace;
+      
+    } 
+    
+    .card {
+      text-align: center; /* Centre le contenu de la carte */
+      max-width: 600px; /* Limite la largeur maximale de la carte */
+      margin: 0 auto; /* Centre la carte horizontalement */
+      padding: 20px; /* Ajoute un peu d'espace autour du contenu */
+    }
+  
+  .ibm-plex-sans-thin {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-extralight {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-light {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-regular {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-medium {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-semibold {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-bold {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-thin-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-extralight-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-light-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-regular-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-medium-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-semibold-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-bold-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments du groupe de formulaire */
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    width: 60%; /* Réduit la largeur de 100% à 60% */
+    max-width: 300px; /* Ajoute une largeur maximale */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Ajoute un peu d'espace au-dessus du bouton */
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
