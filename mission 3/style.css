@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #111;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+nav ul li .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    display: none;
+    min-width: 150px;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px;
+}
+
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Ajout pour centrer horizontalement le menu déroulant */
+nav ul li .dropdown {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
