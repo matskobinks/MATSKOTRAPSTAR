@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Nom: Mathis [Votre nom de famille] -->
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <form action="#" method="post">
+        <table border="0">
+            <tr>
+                <td>Pseudo*</td>
+                <td><input type="text" name="pseudo" placeholder="Votre pseudo" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td>Mot de passe</td>
+                <td><input type="password" name="password" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td>Prénom</td>
+                <td><input type="text" name="prenom" placeholder="Votre Prénom" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" placeholder="Votre Email" maxlength="100" required></td>
+            </tr>
+            <tr>
+                <td>Avatar</td>
+                <td><input type="file" name="avatar" accept="image/*"></td>
+            </tr>
+            <tr>
+                <td>Pays</td>
+                <td>
+                    <select name="pays">
+                        <option value="Espagne">Espagne</option>
+                        <option value="France">France</option>
+                        <option value="Allemagne">Allemagne</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Fruits préférés</td>
+                <td>
+                    <input type="checkbox" name="fruit" value="orange">Orange
+                    <input type="checkbox" name="fruit" value="fraise">Fraise
+                    <input type="checkbox" name="fruit" value="poire">Poire
+                </td>
+            </tr>
+            <tr>
+                <td>Civilité</td>
+                <td>
+                    <input type="radio" name="civilite" value="homme">Homme
+                    <input type="radio" name="civilite" value="femme">Femme
+                </td>
+            </tr>
+            <tr>
+                <td>Ville</td>
+                <td><input type="text" name="ville" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td>Code Postale</td>
+                <td><input type="text" name="code_postal" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td><textarea name="adresse" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Date de Naissance</td>
+                <td><input type="date" name="date_naissance"></td>
+            </tr>
+            <tr>
+                <td>Jauge</td>
+                <td><input type="range" name="jauge" min="0" max="100"></td>
+            </tr>
+            <tr>
+                <td>Téléphone</td>
+                <td><input type="tel" name="telephone" maxlength="15"></td>
+            </tr>
+            <tr>
+                <td>Recherche</td>
+                <td><input type="search" name="recherche"></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><input type="url" name="url"></td>
+            </tr>
+            <tr>
+                <td>Couleur</td>
+                <td><input type="color" name="couleur"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Valider</button></td>
+            </tr>
+        </table>
+    </form>
+    <a href="index.html">Retour au Sommaire</a>
+</body>
+</html>
