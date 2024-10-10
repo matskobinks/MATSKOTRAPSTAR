@@ -1,9 +1,11 @@
-/* Centrage du texte pour tout le site */
+/* Appliquer la police "Montserrat" à tout le site */
 body {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
-/* Style pour le formulaire */
+/* Autres styles... */
+
 form {
     width: 50%;
     margin: 0 auto;
@@ -39,7 +41,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Style pour la carte de visite */
+/* Styles de la carte de visite */
 .carte-visite {
     width: 300px;
     margin: 50px auto;
@@ -50,6 +52,8 @@ button:hover {
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Les autres règles de style... */
 
 .carte-visite h2 {
     font-size: 24px;
