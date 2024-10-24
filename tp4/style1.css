@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh; /* Hauteur totale de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px; /* Largeur maximale pour éviter que ce soit trop grand */
+}
+
+.box {
+    background-color: white;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #555;
+}
